@@ -1,27 +1,23 @@
 #!/usr/bin/env bash
 
-OHMYTMUX_HOME=$HOME/.config/.tmux
-
-cd $HOME/.config
+OHMYTMUX_HOME=$HOME/.local/share/.tmux
 
 if [[ ! -d $OHMYTMUX_HOME ]]; then
-  echo "oh-my-tmux not exist! clone oh-my-tmux repository"
+  echo "oh-my-tmux is not exist! clone oh-my-tmux repository"
   git clone https://github.com/gpakosz/.tmux.git $OHMYTMUX_HOME
+else 
+  echo "Update oh-my-tmux"
+  cd $OHMYTMUX_HOME
+  git pull --force
 fi
 
-if [[ ! -d tmux ]]; then
-	echo "tmux not exist! init tmux submodule"
-	git submodule update --init
-	mkdir tmux
-fi
-
-if [[ ! -h "tmux/tmux.conf" ]]; then
-  echo "tmux config not exist! link: ln -s -f $OHMYTMUX_HOME/.tmux.conf $HOME/.config/tmux/tmux.conf"
+if [[ ! -h "$HOME/.config/tmux/tmux.conf" ]]; then
+  echo "tmux config is not exist! linked: ln -s -f $OHMYTMUX_HOME/.tmux.conf $HOME/.config/tmux/tmux.conf"
   ln -s -f $OHMYTMUX_HOME/.tmux.conf $HOME/.config/tmux/tmux.conf
 fi
 
-if [[ ! -f "tmux/tmux.conf.local" ]]; then
-  echo "tmux config not exist! link: ln -s -f $OHMYTMUX_HOME/.tmux.conf $HOME/.config/tmux/tmux.conf"
+if [[ ! -f "$HOME/.config/tmux/tmux.conf.local" ]]; then
+  echo "tmux config is not exist! copied: $OHMYTMUX_HOME/.tmux.conf.local to $HOME/.config/tmux/tmux.conf.local"
   cp "$OHMYTMUX_HOME/.tmux.conf.local" "$HOME/.config/tmux/tmux.conf.local"
 fi
 
