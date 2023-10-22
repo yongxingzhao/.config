@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh | zsh
+
+if [[ ! -f "$HOME/.config/zsh/zshrc" ]]; then
+	mv $HOME/.zshrc $HOME/.config/zsh/zshrc
+else
+	mv $HOME/.zshrc $HOME/.zshrc.bak
+fi
+
+ln -s $HOME/.config/.zshrc $HOME/.zshrc
+
