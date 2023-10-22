@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+export ZIM_HOME=$HOME/.config/.zim
+
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+
+echo "# init zim config file"
+
+ZIM_CONFIG_FILE=$HOME/.config/zsh/zimrc
+
+
+if [[ ! -f $ZIM_CONFIG_FILE ]]; then
+	if [[ ! -d $HOME/.config/zsh ]]; then
+		echo "zsh dir is not exist!"
+		mkdir -p $HOME/.config/zsh 
+	fi
+	echo "$ZIM_CONFIG_FILE file is not exist!"
+	mv $HOME/.zimrc $ZIM_CONFIG_FILE
+else
+	rm $HOME/.zimrc
+fi
+
+echo "export ZIM_CONFIG_FILE=$ZIM_CONFIG_FILE" >> $HOME/.zshrc
+source $HOME/.zshrc > /dev/null 2>&1
