@@ -9,6 +9,8 @@ iterm2
 jgit
 neofetch
 qBittorrent
+tmux/tmux.conf
+tmux/plugins
 raycast
 wireshark
 zsh
