@@ -8,17 +8,31 @@ plug "$HOME/.config/zsh/mappings.zsh"
 
 # Theme
 # plug "zap-zsh/zap-prompt"
+# plug "spaceship-prompt/spaceship-prompt"
+# plug "MAHcodes/distro-prompt"
+# plug "zap-zsh/singularisart-prompt"
+eval "$(starship init zsh)"
 
 # github
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-syntax-highlighting"
+plug "Aloxaf/fzf-tab"
+plug "Freed-Wu/fzf-tab-source"
 plug "zap-zsh/vim"
+plug "zap-zsh/fnm"
+plug "zap-zsh/sudo"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/exa"
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "wintermi/zsh-brew"
+plug "chivalryq/zsh-autojump"
+plug "chivalryq/git-alias"
+plug "MichaelAquilina/zsh-you-should-use"
+#plug "zap-zsh/magic-enter"
 
 
 
 # iterm2_shell_integration
-[ -e $HOME/.iterm2_shell_integration.zsh ] && plug "$HOME/.iterm2_shell_integration.zsh" || true
+[ -e $HOME/.config/iterm2/.iterm2_shell_integration.zsh ] && plug "$HOME/.config/iterm2/.iterm2_shell_integration.zsh" || true
 
 # Load and initialise completion system
 autoload -Uz compinit
