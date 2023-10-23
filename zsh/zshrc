@@ -9,12 +9,8 @@
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/mappings.zsh"
+plug "$HOME/.config/zsh/plugins.zsh"
 
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "/opt/sdkman/bin/sdkman-init.sh" ]] && plug "$SDKMAN_DIR/bin/sdkman-init.sh"
-
-# iterm2_shell_integration
-[[ -e $HOME/.config/iterm2/.iterm2_shell_integration.zsh ]] && plug "$HOME/.config/iterm2/.iterm2_shell_integration.zsh" || true
 
 # =====================
 # ****** @GitHub ******
