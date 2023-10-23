@@ -1,38 +1,50 @@
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
+# ====================
+# ****** @Local ******
+# ====================
+#
 # sourcing of local files
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/mappings.zsh"
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "/opt/sdkman/bin/sdkman-init.sh" ]] && plug "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+# iterm2_shell_integration
+[[ -e $HOME/.config/iterm2/.iterm2_shell_integration.zsh ]] && plug "$HOME/.config/iterm2/.iterm2_shell_integration.zsh" || true
+
+# =====================
+# ****** @GitHub ******
+# =====================
+#
+plug "Aloxaf/fzf-tab"
+plug "Freed-Wu/fzf-tab-source"
+plug "zap-zsh/vim"
+plug "zap-zsh/sudo"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/exa"
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "chivalryq/git-alias"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "wintermi/zsh-brew"
+plug "wintermi/zsh-fnm"
+# plug "wintermi/zsh-rust"
+plug "chivalryq/zsh-autojump"
+plug "chrishrb/zsh-kubectl"
+#plug "zap-zsh/magic-enter"
+
 
 # Theme
 # plug "zap-zsh/zap-prompt"
 # plug "spaceship-prompt/spaceship-prompt"
 # plug "MAHcodes/distro-prompt"
 # plug "zap-zsh/singularisart-prompt"
-eval "$(starship init zsh)"
+plug "wintermi/zsh-starship"
 
-# github
-plug "Aloxaf/fzf-tab"
-plug "Freed-Wu/fzf-tab-source"
-plug "zap-zsh/vim"
-plug "zap-zsh/fnm"
-plug "zap-zsh/sudo"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/exa"
-plug "zsh-users/zsh-autosuggestions"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "wintermi/zsh-brew"
-plug "chivalryq/zsh-autojump"
-plug "chivalryq/git-alias"
-plug "MichaelAquilina/zsh-you-should-use"
-#plug "zap-zsh/magic-enter"
-
-
-
-# iterm2_shell_integration
-[ -e $HOME/.config/iterm2/.iterm2_shell_integration.zsh ] && plug "$HOME/.config/iterm2/.iterm2_shell_integration.zsh" || true
 
 # Load and initialise completion system
 autoload -Uz compinit
