@@ -9,7 +9,7 @@
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/mappings.zsh"
-plug "$HOME/.config/zsh/plugins.zsh"
+plug "$HOME/.config/zsh/plugins/plugins.zsh"
 
 
 # =====================
