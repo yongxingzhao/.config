@@ -16,24 +16,26 @@ plug "$HOME/.config/zsh/plugins/plugins.zsh"
 # ****** @GitHub ******
 # =====================
 #
-plug "Aloxaf/fzf-tab"
-plug "Freed-Wu/fzf-tab-source"
 plug "zap-zsh/vim"
 plug "zap-zsh/sudo"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/exa"
+plug "zap-zsh/fzf"
 plug "zap-zsh/completions"
+#plug "zap-zsh/magic-enter"
+plug "zsh-users/zsh-completions"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "Aloxaf/fzf-tab"
+plug "Freed-Wu/fzf-tab-source"
 plug "hlissner/zsh-autopair"
+plug "chivalryq/zsh-autojump"
 plug "chivalryq/git-alias"
 plug "MichaelAquilina/zsh-you-should-use"
 plug "wintermi/zsh-brew"
 plug "wintermi/zsh-fnm"
 # plug "wintermi/zsh-rust"
-plug "chivalryq/zsh-autojump"
 plug "chrishrb/zsh-kubectl"
-#plug "zap-zsh/magic-enter"
 
 
 # Theme
