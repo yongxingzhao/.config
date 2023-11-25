@@ -8,5 +8,5 @@ else
 	mv $HOME/.zshrc $HOME/.zshrc.bak
 fi
 
-ln -s $HOME/.config/.zshrc $HOME/.zshrc
+ln -s $HOME/.config/zsh/zshrc $HOME/.zshrc
 
