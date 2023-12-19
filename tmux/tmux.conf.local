@@ -453,6 +453,8 @@ set -g @plugin 'tmux-plugins/tmux-open'
 
 set -g @plugin 'schasse/tmux-jump'
 
+# set -g @jump-key ''
+
 set -g @plugin 'sainnhe/tmux-fzf'
 
 # -- custom variables ----------------------------------------------------------
