@@ -1,6 +1,12 @@
-# =================================
+# =========================
+# ****** @User Cargo ******
+# =========================
+#
+export PATH=$HOME/.cargo/bin:$PATH
+
+# ==========================
 # ****** @User SDKMAN ******
-# =================================
+# ==========================
 #
 export SDKMAN_DIR="/opt/sdkman"
 
@@ -13,9 +19,9 @@ export SDKMAN_DIR="/opt/sdkman"
 export VI_MODE_ESC_INSERT="jk"
 
 
-# =================================
+# =============================
 # ****** @Theme starship ******
-# =================================
+# =============================
 #
 # wilmal, blazing-fast, and infinitely customizable prompt for any shell!
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
