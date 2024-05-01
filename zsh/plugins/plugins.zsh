@@ -1,3 +1,6 @@
+#fzf
+eval "$(fzf --zsh)"
+
 # sdkman
 [[ -e $HOME/.config/zsh/plugins/zsh-sdkman/zsh-sdkman.plugin.zsh ]] && source "$HOME/.config/zsh/plugins/zsh-sdkman/zsh-sdkman.plugin.zsh"
 
