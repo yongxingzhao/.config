@@ -4,11 +4,16 @@
 .tmux
 .zim
 clash
+clash-verge
 github-copilot
 iterm2
+zed/.*
+zed/conversations
+zed/embeddings
 jgit
 qBittorrent
 tmux/tmux.conf
 tmux/plugins
 raycast
 wireshark
+oss/*
