@@ -1,4 +1,15 @@
 # =========================
+# ****** @User Go ******
+# =========================
+#
+# export GOROOT=/opt/homebrew/bin
+export GOPATH=$HOME/WorkSpaces/GolandProjects
+export PATH=$GOROOT:$GOPATH:$PATH
+
+export GVM_ROOT=$HOME/.gvm
+export PATH=$GVM_ROOT/bin:$PATH
+
+# =========================
 # ****** @User Cargo ******
 # =========================
 #
@@ -41,3 +52,6 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export PATH=$(echo $PATH | tr : "\n"| sort | uniq | tr "\n" :)
+
+# network proxy
+# export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
