@@ -3,7 +3,8 @@
 # =====================
 alias md="mkdir -pv"
 alias rd="rmdir -pv"
-
+alias vimrc="vim $HOME/.vim/vimrc"
+alias zshrc="vim $HOME/.config/zsh/zshrc"
 
 # ===========================
 # ****** @Command tmux ******
