@@ -10,6 +10,7 @@ iterm2
 zed/.*
 zed/conversations
 zed/embeddings
+zed/prompts
 jgit
 qBittorrent
 tmux/tmux.conf
