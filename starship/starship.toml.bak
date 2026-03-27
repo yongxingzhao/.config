@@ -1,0 +1,44 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Replace the '❯' symbol in the prompt with '➜'
+# The name of the module we are configuring is 'character'
+[character] 
+# The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+success_symbol = '[➜](bold green) ' 
+
+# The format string used before the text input if the previous command failed.
+error_symbol = '[➜](bold red) ' 
+
+# With custom vim shape
+vimcmd_symbol = '[v➜](bold green) '
+
+# The format string used before the text input if the shell is in vim replace_one mode.
+vimcmd_replace_one_symbol = '[r➜](bold purple) '
+
+# The format string used before the text input if the shell is in vim replace mode.
+vimcmd_replace_symbol = '[r➜](bold purple) '
+
+# The format string used before the text input if the shell is in vim visual mode.
+vimcmd_visual_symbol = '[V➜](bold yellow) '
+
+[git_metrics]
+disabled = true
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+disabled = false
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[shell]
+disabled = true
